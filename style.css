@@ -1,0 +1,104 @@
+#timer{
+    background-color: beige;
+    color: black;
+    border: solid black 2px ;
+    border-radius: 30px;
+    box-shadow: -4px -3px 23px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: -4px -3px 23px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -4px -3px 23px 0px rgba(0,0,0,0.75);
+
+width: 600px;
+height: 400px;
+margin-left: 340px;
+margin-top: 150px;
+}
+
+#timerdiv1{
+    width: 600px;
+    height: 50px;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    
+}
+#timerspan1{
+    padding-left: 150px;
+   
+}
+#timerspan2{
+    padding-left: 140px;
+    
+}
+#timerdiv2{
+    width: 600px;
+    height: 270px;
+    display: flex;
+    padding-left: 60px;
+   margin-top: 90px;
+   margin-bottom: -90px;
+}
+#buttons{
+    padding-left: 60px;
+
+}
+#demo{
+    padding-left: 60px;
+    padding-top: 40px;
+    font-size: 70px;
+}
+span{
+    font-size: 30px;
+}
+.digit {
+    font-size: 50px;
+    color: black;
+}
+  
+.txt {
+    font-size: 20px;
+    color: black;
+}
+button{
+    background-color: white;
+    color: blue;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 20px;
+    margin-right: 20px;
+    width: 70px;
+    height: 30px;
+}
+
+#start{
+    background-color: blue;
+    color: white;
+}
+imer{
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    margin-left: 3rem;
+    gap: 30px;
+    color:red;
+    margin-top: -5px;
+    }
+    .days{
+    background-color: blanchedalmond;
+    padding: 11px;
+    font-size: 22px;
+    }
+    .hours{
+    background-color: blanchedalmond;
+    padding: 11px;
+    font-size: 22px;
+    }
+    .mins{
+    background-color: blanchedalmond;
+    padding: 11px;
+    font-size: 22px;
+    }
+    .secs{
+    background-color: blanchedalmond;
+    padding: 11px;
+    font-size: 22px;
+    }
