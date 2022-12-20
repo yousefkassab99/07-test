@@ -1,57 +1,58 @@
-let startBtn = document.getElementById('start');
-let resetBtn = document.getElementById('reset');
 
-let minute = 00;
-let second = 00;
+const start = document.getElementById("start")
+const reset = document.getElementById("reset")
+const hour = document.getElementById("hour")
+const minutes = document.getElementById("minutes")
+const seconds = document.getElementById("seconds")
+const finish = document.getElementById("finish")
+const setTime = document.getElementById("setTime")
 
-startBtn.addEventListener('click', function () {
-    timer = true;
-    stopWatch();
-});
-  
-stopBtn.addEventListener('click', function () {
-    timer = false;
-});
-  
-resetBtn.addEventListener('click', function () {
-    timer = false;
-    minute = 0;
-    second = 0;
 
-    document.getElementById('min').innerHTML = "05";
-    document.getElementById('sec').innerHTML = "00";
 
-});
-  
-function stopWatch() {
-    if (timer) {
-        count--;
-       
-        if (second == 60) {
-            minute--;
-            second = 0;
+reset.onclick = _ => {
+
+    clearInterval(myinterval);
+    finish.style.display = "none"  
+    hour.innerText = "00";
+    minutes.innerText = "5";
+    seconds.innerText = "00";
+    start.classList.remove("pause");
+    start.classList.add("start");
+    start.innerText = "start"
+}
+
+start.onclick = _ => {
+    if (start.classList.contains("start")) {
+        start.classList.remove("start");
+        start.classList.add("pause");
+        start.innerText = "pause"
+        myinterval = setInterval(decrement, 1000);
+    }
+
+    else if (start.classList.contains("pause")) {
+        start.classList.remove("pause");
+        start.classList.add("start");
+        start.innerText = "start"
+        clearInterval(myinterval);
+    }
+
+}
+function decrement() {
+    finish.style.display = "none"  
+
+    if (seconds.innerText > 0) {
+        seconds.innerText -= 1
+    } else if (seconds.innerText == 0) {
+        if (minutes.innerText != 0) {
+            minutes.innerText -= 1
+            seconds.innerText = 59
+        } else if (hour.innerText != 0) {
+            hour.innerText -= 1
+            minutes.innerText = 60
+            seconds.innerText = 60
+        } else {
+            finish.style.display = "block"  
         }
-  
-        if (minute == 60) {
-            hour--;
-            minute = 0;
-            second = 0;
-        }
-  
-        let minString = minute;
-        let secString = second;
-     
-        if (minute < 10) {
-            minString = "0" + minString;
-        }
-  
-        if (second < 10) {
-            secString = "0" + secString;
-        }
-
-        document.getElementById('min').innerHTML = minString;
-        document.getElementById('sec').innerHTML = secString;
- 
-        setTimeout(stopWatch, 10);
     }
 }
+

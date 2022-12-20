@@ -7,33 +7,31 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body>
-  <div id="timer">
-    <div id="timerdiv1">
-        <img src=""  width="" height=""/><span id="timerspan1">TIMER</span>
-        <img src="" width="" height="" /><span id="timerspan2">STOPWATCH</span>
-        <hr/>
-    </div>
-    
-    <div id="timerdiv2">  
-        
-       
-       
-          <span class="txt">Min</span>
-          <span class="digit" id="sec">
-            05</span>
-          <span class="txt">Sec</span>
-          <span class="digit" id="count">
-            00</span>
-       </div>
-       <div id="buttons">
-        <button class="btn" id="start">
-          Start</button>
-        
-        <button class="btn" id="reset">
-          Reset</button>
-    </div>
+<body>  
+    <main>
+        <div class="container">
+                    <div class="selection">
+                        <h1 class="active" id="timer">Timer</h1>
+                        <h1 id="stopwatch">StopWatch</h1>
+                    </div>
+                    <div class="body">
+                        <div class="counter">
+                            <div><span id="hour">0</span> h</div>
+                            <div><span id="minutes">00</span> m</div>
+                            <div><span id="seconds">0</span> s</div>
+                        </div>
+                        <h2 id="finish">finished</h2>
+                    </div>
+                    <div class="buttons">
+                        <div class="left">
+                            <button class="start" id="start">start</button>
+                            <button id="reset" class="reset">reset</button>
+                        </div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+            </main>
+    <script src="./main.js"></script>
 </body>
 
-<main src="main.js"></main>
 </html>
